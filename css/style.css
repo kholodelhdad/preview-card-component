@@ -1,0 +1,123 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: 'Outfit', sans-serif;
+    text-decoration: none;
+    user-select: none;
+
+}
+body{
+    background-color: var(--mainBG);
+    margin:25px;
+}
+
+:root{
+    --mainBG : hsl(217, 54%, 11%);
+    --cardBG: hsl(216, 50%, 16%);
+    --line : hsl(215, 32%, 27%);
+    --white :hsl(0, 0%, 100%);
+    --softBlue :hsl(215, 51%, 70%);
+    --cyan : hsl(178, 100%, 50%);
+}
+p{
+    font-size: 18px;
+    color: var(--softBlue);
+    font-weight: lighter;
+    margin-bottom: 22px;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+section{
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.card{
+    background-color: var(--cardBG);
+    width: 351px; 
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: 25px 25px hsl(217deg 45% 10% / 73%),
+               -25px 25px hsl(217deg 45% 10% / 73%),
+                25px 15px 0 30px #0C192C;
+}
+.img_header{
+    position: relative;
+}
+img[alt="main_image"]{
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 99%; 
+    border-radius: 10px;
+    top: 0;
+    transition: background-image 2s;
+}
+.img_header:hover .overlay {
+    cursor: pointer;
+    background-image: url(../images/icon-view.svg) , linear-gradient(rgba(0, 255, 255, 0.367),rgba(0, 255, 255, 0.367));
+    background-repeat: no-repeat;
+    background-position: center;
+}
+h3{
+    margin:22px 0;
+    color: var(--white);
+    font-weight: 600;
+}
+h3:hover{
+    color:var(--cyan);
+}
+
+.left{
+    float: left;
+    color: var(--cyan);
+    display: flex;
+    justify-content: space-between;
+}
+.right{
+    float: right;
+    color: var(--softBlue);
+    display: flex;
+    justify-content: space-between;
+}
+.clear{
+    clear: both;
+}
+.left img , .right img{
+    margin-right: 5px;
+}
+.floating{
+    border-bottom: thin solid var(--line);
+    padding-bottom: 22px;
+}
+footer{
+    margin-top: 22px ;
+    display: flex; 
+    align-items:center; 
+    padding-bottom: 10px;
+}
+footer > img{
+    width: 37px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+}
+footer > span{
+    margin-left: 12px; 
+    align-self: center;
+    color: var(--softBlue);
+    word-spacing: 3px;
+}
+footer >span>a{
+    color: var(--white);
+}
+footer>span>a:hover{
+   color: var(--cyan);
+}
