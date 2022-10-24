@@ -7,7 +7,6 @@
     font-family: 'Outfit', sans-serif;
     text-decoration: none;
     user-select: none;
-
 }
 body{
     background-color: var(--mainBG);
@@ -135,3 +134,5 @@ footer >span>a{
 footer>span>a:hover{
    color: var(--cyan);
 }
+.random{
+color:red;}
